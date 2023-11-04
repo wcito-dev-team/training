@@ -1,6 +1,6 @@
 To deploy the app
 
-1. CLone the repository https://github.com/wcito-dev-team/training.git
+1. Clone the repository https://github.com/wcito-dev-team/training.git
 2. cd to the project directory 
 3. run mvn clean package to generate the jar file
 4. run java -jar /path to jar file to run the application
