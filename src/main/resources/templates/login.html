@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en"
+      dir="ltr" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <link rel="icon" th:href="@{/assets/dist/img/winners_bg.png}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible"
+          content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>WCITO | Login</title>
+
+    <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
+    <meta name="robots"
+          content="noindex">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,700%7CRoboto:400,500%7CRoboto:400,500&display=swap"
+          rel="stylesheet">
+
+    <!-- Perfect Scrollbar -->
+    <link type="text/css"
+          th:href="@{/student/assets/vendor/perfect-scrollbar.css}"
+          rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link type="text/css"
+          th:href="@{/student/assets/css/material-icons.css}"
+          rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link type="text/css"
+          th:href="@{/student/assets/css/fontawesome.css}"
+          rel="stylesheet">
+
+    <!-- Preloader -->
+    <link type="text/css"
+          th:href="@{/student/assets/vendor/spinkit.css}"
+          rel="stylesheet">
+
+    <!-- App CSS -->
+    <link type="text/css"
+          th:href="@{/student/assets/css/app.css}"
+          rel="stylesheet">
+
+</head>
+
+<body class="login">
+
+<div class="d-flex align-items-center"
+     style="min-height: 100vh">
+    <div class="col-sm-8 col-md-6 col-lg-4 mx-auto"
+         style="min-width: 300px;">
+        <div class="text-center mt-5 mb-1">
+            <div class="avatar avatar-lg">
+                <img th:src="@{/assets/dist/img/winners.png}"
+                     class="avatar-img rounded-circle"
+                     alt="Winners Chapel International Toronto"/>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center mb-5 navbar-light">
+            <a href="#"
+               class="navbar-brand m-0">
+                Winners Chapel Int'l Toronto
+            </a>
+        </div>
+        <div class="card navbar-shadow">
+            <div class="card-header text-center">
+                <h4 class="card-title">Login</h4>
+                <p class="card-subtitle">Access your account</p>
+            </div>
+            <div class="card-body">
+                <div class="alert alert-danger" role="alert" th:if="${isError == true}">
+                    <span th:text="${message}"></span>
+                </div>
+                <form th:action="@{/login}"
+                      method="post">
+                    <div class="form-group">
+                        <label class="form-label"
+                               for="email">Your email address:</label>
+                        <div class="input-group">
+                            <input id="email"
+                                   type="email"
+                                   required
+                                   class="form-control form-control-prepended"
+                                   placeholder="Your email address"
+                                   name="username">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label"
+                               for="password">Your password:</label>
+                        <div class="input-group">
+                            <input id="password"
+                                   type="password"
+                                   required
+                                   class="form-control form-control-prepended"
+                                   placeholder="Your password"
+                                   name="password">
+
+                        </div>
+                    </div>
+                    <div class="form-group ">
+                        <button type="submit"
+                                class="btn btn-danger btn-block">Login
+                        </button>
+                    </div>
+                    <div class="text-center">
+                        <a th:href="@{/student/forgot-password}" class="text-black-70"
+                           style="text-decoration: underline;">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="card-footer text-center text-black-50">
+                Don't have an account yet? <a th:href="@{/student/signup}">Sign Up</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jQuery -->
+<script th:src="@{/student/assets/vendor/jquery.min.js}"></script>
+
+<!-- Bootstrap -->
+<script th:src="@{/student/assets/vendor/popper.min.js}"></script>
+<script th:src="@{/student/assets/vendor/bootstrap.min.js}"></script>
+
+<!-- Perfect Scrollbar -->
+<script th:src="@{/student/assets/vendor/perfect-scrollbar.min.js}"></script>
+
+<!-- MDK -->
+<script th:src="@{/student/assets/vendor/dom-factory.js}"></script>
+<script th:src="@{/student/assets/vendor/material-design-kit.js}"></script>
+
+<!-- App JS -->
+<script th:src="@{/student/assets/js/app.js}"></script>
+
+<!-- Highlight.js -->
+<script th:src="@{/student/assets/js/hljs.js}"></script>
+
+<!-- App Settings (safe to remove) -->
+<script th:src="@{/student/assets/js/app-settings.js}"></script>
+
+<script>
+
+</script>
+</body>
+
+</html>
