@@ -54,10 +54,11 @@
                                       method="post">
                                     <div class="form-group">
                                         <label class="col-form-label">Phone Numbers</label>
-                                        <span th:if="${#fields.hasErrors('to')}" th:errors="*{to}"></span>
+                                        <span th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></span>
                                         <textarea required class="form-control" rows="4" id="welcome-message"
                                                   placeholder="Enter comma separated numbers"
-                                                  th:field="*{to}"></textarea>
+                                                  th:field="*{phoneNumber}">
+                                        </textarea>
                                     </div>
 
                                     <div class="form-group">

@@ -1,25 +1,20 @@
 package com.example.demo.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-
-
 public class SmsDto {
-    private String to;
+    private String phoneNumber;
     private String message;
 
     public SmsDto(String phoneNumber, String message) {
-        this.to = phoneNumber;
+        this.phoneNumber = phoneNumber;
         this.message = message;
     }
 
-
-    public String getTo() {
-        return to;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setTo(String to) {
-        this.to = to;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
     public String getMessage() {

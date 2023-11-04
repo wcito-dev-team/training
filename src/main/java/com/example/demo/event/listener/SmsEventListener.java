@@ -18,12 +18,11 @@ public class SmsEventListener implements ApplicationListener<SmsEvent> {
     private Logger logger = LoggerFactory.getLogger(SmsEventListener.class);
     @Autowired
     SmsService smsService;
-    public SmsEventListener() {
-    }
+    public SmsEventListener() {}
 
     public void onApplicationEvent(SmsEvent smsEvent) {
         List<SmsDto> smsDtoList = Arrays.stream(
-                smsEvent.getEventData().getTo().split(",")
+                smsEvent.getEventData().getPhoneNumber().split(",")
         ).map(phoneNumber -> new SmsDto(
                 phoneNumber,
                 smsEvent.getEventData().getMessage()

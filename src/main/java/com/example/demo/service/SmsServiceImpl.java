@@ -22,7 +22,8 @@ public class SmsServiceImpl implements SmsService {
     @Override
     public void sendSms(SmsDto smsDTO) {
         Twilio.init(accountSid, authToken);
-        Message.creator(new PhoneNumber(smsDTO.getTo()),
-                new PhoneNumber(smsSender), smsDTO.getMessage()).create();
+        Message.creator(new PhoneNumber(smsDTO.getPhoneNumber()),
+                new PhoneNumber(smsSender), smsDTO.getMessage()
+        ).create();
     }
 }
